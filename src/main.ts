@@ -35,4 +35,4 @@ const fields=[
     "step": 1
   }
 ];
-worksheet({name:"Spool Finish",fields,calculate,accent:"#B695F0",motion:{"motif":"shuttle","color":"#B695F0","shine":"#F8E8FF"}});
+worksheet({name:"Spool Finish",fields,calculate,accent:"#B695F0",motion:{enabled:false}});
