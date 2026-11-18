@@ -2,14 +2,38 @@
 
 Check whether a weighed spool can finish a print after allowing for purge and safety margin.
 
-A 223 g spool with 160 g tare yields 63 g. A 58 g part plus 8 g purge is 3 g short.
+A slicer can tell you how much a part uses. Your scale weighs the plastic and the spool together. Spool Finish does the subtraction at the printer and keeps the four numbers for the next job.
 
-Turn the wheel to browse results. Click to edit inputs, turn to change the selected value, click to select the next parameter, and press Start to return to results. Hold the wheel button in the editor to restore that parameter's starting value. Parameters persist on this device.
+## Decide whether to start the print
 
-Inputs: Gross spool (0 to 5000 g), Empty tare (0 to 2000 g), Print use (0 to 5000 g), Purge (0 to 500 g).
+1. Weigh the loaded spool. In the recorded example it weighs **223 g**. An empty spool of the same type weighs **160 g**, leaving **63 g** of filament.
+2. Read **PRINT MARGIN**. This job needs 58 g for the part and 8 g for purge. The display shows **−3 g**.
+3. Turn the wheel forward to **REQUIRED**. The **66 g** here includes both the printed part and its purge. Turn back to see the shortfall again.
 
-## Run locally
+![Turning from a 3 g shortfall to the 66 g required for the job](media/guide/check-print-margin.gif)
 
-From this folder, run `~/.busy-emulator/bin/busy-emulator dev --once` with BUSY Bar Emulator open. Back exits.
+## Use the same calculation with a fresh spool
 
-![BUSY Bar front display](screenshots/front-1.png)
+1. Click the wheel on a result to enter the editor. **GROSS SPOOL** is the first field.
+2. Turn one notch for each gram. The clip moves from **223 g** to **224 g** and back, so you can see which number the wheel is changing.
+3. Click through **Empty tare**, **Print use** and **Purge**, setting each in grams. Press **Start** to return to the result. A wheel hold in the editor restores the selected field’s starting value.
+
+![Editing Gross spool by one gram and returning to Print margin](media/guide/edit-spool-weight.gif)
+
+## Which numbers to use
+
+Use the tare for this spool design. Two spools carrying the same type of filament can have different empty weights. Enter the slicer’s part and purge estimates separately so you can account for a multicolour print or a new purge setting. A positive margin is the weight left after both allowances. The calculation uses the weights you enter and requires no connection to the printer.
+
+## Run in the emulator
+
+Open BUSY Bar Emulator. From this repository, run:
+
+```sh
+~/.busy-emulator/bin/busy-emulator dev --once
+```
+
+Press **Back** to exit.
+
+The GIFs are excerpts from the emulator recording. The front display is enlarged 9× and the end frames pause for reading.
+
+[Full recording](media/controls.mp4) · [Rear display](screenshots/back-1.png) · [Firmware test](EMULATOR-QA.md) · [MIT license](LICENSE)
