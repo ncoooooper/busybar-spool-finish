@@ -8,4 +8,8 @@ A 223 g spool with 160 g tare yields 63 g. A 58 g part plus 8 g purge is 3 g sho
 
 ## Display capture
 
-Firmware 1.3.1 rendered both README examples. Each square in a guide GIF is one front-display pixel enlarged to 9 × 9. The production archive was built from the source in this repository.
+Firmware 1.3.1 rendered both README examples. Each square in a guide GIF is one front LED in a 16 × 16 cell. The production archive was built from the source in this repository.
+
+## Screen transition capture
+
+Firmware 1.3.1 rendered the display sequences in the README. The release archive also ran on a fresh emulator with rapid wheel reversals and Back during a transition. The guide uses a 14 × 14 lit area inside each 16 × 16 cell. Input sequences, frame counts and the release archive checksum are in [the capture record](media/screen-transitions.json).

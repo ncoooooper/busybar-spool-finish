@@ -1,7 +1,7 @@
 {
   "name": "busybar-spool-finish",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check whether a weighed spool can finish a print after allowing for purge and safety margin.",
   "author": "ncoooooper",
   "type": "module",

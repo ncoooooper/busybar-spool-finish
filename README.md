@@ -4,6 +4,20 @@ Check whether a weighed spool can finish a print after allowing for purge and sa
 
 A slicer can tell you how much a part uses. Your scale weighs the plastic and the spool together. Spool Finish does the subtraction at the printer and keeps the four numbers for the next job.
 
+## Screen transitions
+
+Change the spool selection and read the material left after the print.
+
+![Spool Finish front display. Change the spool selection and read the material left after the print.](media/guide/screen-transitions.gif)
+
+<details>
+
+<summary>Watch the rear display</summary>
+
+![Spool Finish rear display during the recorded controls](media/guide/screen-transitions-rear.gif)
+
+</details>
+
 ## Decide whether to start the print
 
 1. Weigh the loaded spool. In the recorded example it weighs **223 g**. An empty spool of the same type weighs **160 g**, leaving **63 g** of filament.
@@ -34,6 +48,6 @@ Open BUSY Bar Emulator. From this repository, run:
 
 Press **Back** to exit.
 
-The GIFs are excerpts from the emulator recording. The front display is enlarged 9× and the end frames pause for reading.
+The GIFs are excerpts from the emulator recording. Each LED occupies a 16 × 16 cell with a black border. The last frame pauses for reading.
 
 [Full recording](media/controls.mp4) · [Rear display](screenshots/back-1.png) · [Firmware test](EMULATOR-QA.md) · [MIT license](LICENSE)
