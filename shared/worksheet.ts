@@ -14,8 +14,8 @@ export function worksheet(def:Worksheet){
    const results=def.calculate(values);page=Math.min(page,results.length-1);
    const r=results[page],f=def.fields[field],val=editing?number(f,values[field]):r.value;
    const title=editing?f.name:r.name;
-   const frame:Frame=[label("kind",title.toUpperCase().slice(0,16),1,0,def.accent+"FF","front","tiny"),
-     label("number",val.slice(0,18),1,6,"#F8F4DFFF","front","small")];
+   const frame:Frame=[label("kind",title.toUpperCase(),1,0,def.accent+"FF","front","tiny"),
+     label("number",val,1,6,"#F8F4DFFF","front","small")];
    if(r.fraction!==undefined&&!editing&&val.length<=8){
      const q=Math.max(0,Math.min(1,r.fraction));
      for(let i=0;i<6;i++)frame.push(rect("scale"+i,52+i*3,14-i,2,1+i,i<Math.round(q*6)?def.accent+"FF":"#333D45FF"));
