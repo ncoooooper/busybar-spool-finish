@@ -1,0 +1,6 @@
+{
+  "category": "utilities",
+  "short_description": "Check whether a weighed spool can finish a print after allowing for purge and safety margin.",
+  "description": "Check whether a weighed spool can finish a print after allowing for purge and safety margin. A 223 g spool with 160 g tare yields 63 g. A 58 g part plus 8 g purge is 3 g short.",
+  "changelog": "First public version."
+}

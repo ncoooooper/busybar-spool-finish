@@ -4,6 +4,6 @@
   "name": "Spool Finish",
   "version": "0.1.0",
   "api_version": "27.12.0",
-  "description": "Spool Finish",
+  "description": "Check whether a weighed spool can finish a print after allowing for purge and safety margin.",
   "author": "ncoooooper"
 }

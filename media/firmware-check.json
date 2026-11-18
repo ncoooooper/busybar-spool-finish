@@ -1,0 +1,17 @@
+{
+  "id": "BB-032",
+  "source": "Local on-device computation using editable numeric inputs.",
+  "scenario": "A 223 g spool with 160 g tare yields 63 g. A 58 g part plus 8 g purge is 3 g short.",
+  "keys": [
+    "up",
+    "down",
+    "ok",
+    "up",
+    "down",
+    "start"
+  ],
+  "frames": 54,
+  "distinct_frames": 21,
+  "exit": "App io.ncoooooper.spoolfinish exited: finished; heap peak 84.4 of 128 KiB",
+  "sha256": "765979f27e7b5824b3ec23a2d9476c186b2f2a8a3994560831e57192d6dcc79d"
+}
