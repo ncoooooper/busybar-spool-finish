@@ -8,7 +8,7 @@ export function worksheet(def:Worksheet){
  let values=def.fields.map((f,i)=>Number.isFinite(saved[i])?Math.max(f.min,Math.min(f.max,saved[i])):f.initial);
  let field=0,page=0,editing=false,dirty=false,delay:ReturnType<typeof setTimeout>|undefined;
  function commit(){if(delay!==undefined)clearTimeout(delay);delay=undefined;if(dirty){persist("inputs",values);dirty=false;}}
- function schedule(){dirty=true;if(delay!==undefined)clearTimeout(delay);delay=setTimeout(commit,750);}
+ function schedule(){dirty=true;if(delay!==undefined)clearTimeout(delay);delay=setTimeout(()=>{delay=undefined;commit();},750);}
  function number(f:Parameter,value:number){return f.choices?f.choices[Math.round(value)]||"?":Number(value.toFixed(f.digits??2))+f.unit;}
  function draw():Frame{
    const results=def.calculate(values);page=Math.min(page,results.length-1);
